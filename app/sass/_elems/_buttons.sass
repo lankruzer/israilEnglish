@@ -1,0 +1,90 @@
+.btn
+	display: inline-block
+	min-width: 240px
+	padding: (70px - 25) / 2
+	box-sizing: border-box
+	text-align: center
+	font-size: 25px
+	line-height: 25px
+	min-height: 70px
+	background-color: $white
+	transition: .25s
+	&:hover
+		text-decoration: none
+
+	&_shadow
+		position: relative
+		overflow: visible
+		&::after
+			content: ''
+			position: absolute
+			left: 50%
+			right: 0
+			z-index: -1
+			bottom: 15px
+			width: 55%
+			height: 10px
+			transform: translateX(-50%)
+			box-shadow: 0 0 40px 25px $blue
+			transition: .25s
+		&:hover::after
+			box-shadow: 0 0 40px 25px transparent
+
+
+
+	&_transparent
+		position: relative
+		padding: 10px 50px 10px 15px
+		box-sizing: border-box
+		font-family: $avenir
+		font-size: 20px
+		font-weight: 500
+		color: $white
+		border: 1px solid transparent
+		transition: .25s
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			right: 12px
+			width: 23px
+			height: 16px
+			background-image: url('../img/icon-arrow.svg')
+			transform: translate(0, -50%)
+		&:hover
+			color: $white
+			border-color: $white
+			text-decoration: none
+			&::before
+				animation-name: translateX
+				animation-duration: 1s
+				animation-iteration-count: infinite
+
+	&_green
+		color: $white
+		background-color: $green
+		&:hover
+			color: $white
+			background-color: darken($green, 10)
+
++media-breakpoint-down(lg)
+	.btn
+		min-width: 200px
+		min-height: 60px
+		padding: (60px - 25) / 2
+
++media-breakpoint-down(sm)
+	.btn
+		min-width: 180px
+		min-height: 50px
+		padding: (50px - 25) / 2
+		font-size: 20px
+
+
+@keyframes translateX
+	0%
+		transform: translate(0, -50%)
+	50%
+		transform: translate(-10%, -50%)
+	100%
+		transform: translate(0, -50%)

@@ -13,10 +13,16 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.28
 	font-family: $default-font
 	overflow-x: hidden
-	color: $text
+	color: $black
+	background: #fff url('../img/bg-main.png') top no-repeat
+	background-size: 100% auto
+	&.hide-scroll
+		height: 100vh
+		overflow: hidden
+
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -24,6 +30,11 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
+
+img,
+video	
+	max-width: 100%
+	height: auto		
 
 .img-responsive
 	display: block
@@ -39,5 +50,17 @@ b, strong
 	font-weight: bold
 
 
+@import "_elems/buttons"
+@import "_elems/lines"
+@import "_elems/screen"
+
+@import "_screens/header"
+@import "_screens/main"
+@import "_screens/what"
+@import "_screens/features"
+@import "_screens/lid-1"
+@import "_screens/different"
+@import "_screens/ready"
+@import "_screens/footer"
 
 @import "media" // Always at the end

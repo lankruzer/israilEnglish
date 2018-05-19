@@ -1,0 +1,42 @@
+.screen-lid
+	padding-bottom: 60px
+	text-align: center
+	background-color: $gray-light
+	&__title
+		margin: 0 auto 25px
+		font-size: 36px
+	.btn
+		margin-bottom: 20px
+	&__small-text
+		font-size: 22px
+
++media-breakpoint-down(lg)
+	.screen-lid
+		padding: 70px 0 50px
+		&__title
+			margin-bottom: 20px
+			font-size: 30px
+		&__small-text
+			font-size: 20px
+
++media-breakpoint-down(md)
+	.screen-lid
+		padding: 50px 0 40px
+		&__title
+			margin-bottom: 15px
+			font-size: 24px
+		.btn
+			margin-bottom: 10px
+		&__small-text
+			font-size: 16px
+
++media-breakpoint-down(sm)
+	.screen-lid
+		padding: 40px 0 30px
+		&__title
+			margin-bottom: 10px
+			font-size: 20px
+		.btn
+			margin-bottom: 5px
+		&__small-text
+			font-size: 14px

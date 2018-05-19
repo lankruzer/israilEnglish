@@ -1,0 +1,37 @@
+.footer
+	padding: 50px 0
+	text-align: center
+	background-color: $gray-light
+	&-nav-ul
+		margin: 0 auto 10px
+		padding: 0
+		list-style: none
+		&-li
+			margin: 10px
+			&__link
+				display: block
+				box-sizing: border-box
+				padding: 10px
+				font-size: 22px
+				color: $gray-dark
+	&__copyright
+		font-size: 14px
+		color: $gray-dark
+
++media-breakpoint-down(lg)
+	.footer
+		padding: 20px 0 30px
+		&-nav-ul-li
+			margin: 5px 10px
+			&__link
+				padding: 5px
+				font-size: 20px
+
++media-breakpoint-down(sm)
+	.footer
+		padding: 20px 0 30px
+		&-nav-ul-li
+			margin: 5px
+			&__link
+				padding: 2px
+				font-size: 18px

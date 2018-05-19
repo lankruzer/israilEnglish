@@ -1,0 +1,65 @@
+.screen-features
+	padding-top: 0
+	.screen-title
+		margin-bottom: 60px
+
+.feature
+	position: relative
+	z-index: 1
+	margin-bottom: 20px
+	padding: 30px 35px
+	box-sizting: border-box
+	border-radius: 2px
+	background-color: $white
+	box-shadow: 0 12px 35px 0 rgba(190, 190, 190, 0)
+	transition: box-shadow .25s
+	&:hover
+		z-index: 2
+		box-shadow: 0 12px 35px 0 rgba(190, 190, 190, 0.33)
+		svg
+			fill: $blue-light
+
+	&-header
+		margin-bottom: 15px
+		&__icon
+			margin-right: 20px
+			width: 45px
+			text-align: center
+			img,
+			svg
+				width: auto
+				height: auto
+				max-height: 35px
+				transition: .25s
+			svg
+				fill: $blue-lightenning
+		&__title
+			font-family: $avenir
+			font-size: 20px
+			font-weight: 600
+			color: $blue
+	&-text
+		font-size: 16px
+		color: $black-light
+		&__p
+			margin: 0
+
++media-breakpoint-down(lg)
+	.screen-features
+		.screen-title
+			margin-bottom: 40px
+
+	.feature
+		padding: 20px 25px
+		&-header
+			margin-bottom: 10px
+
++media-breakpoint-down(sm)
+	.screen-features
+		.screen-title
+			margin-bottom: 20px
+
+	.feature
+		padding: 10px 15px
+		&-header
+			margin-bottom: 5px

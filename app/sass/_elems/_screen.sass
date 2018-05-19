@@ -1,0 +1,33 @@
+.screen
+	padding: 100px 0 110px
+	&-title
+		margin: 0 auto 30px
+		width: 100%
+		text-align: center
+		font-family: $avenir
+		font-size: 50px
+		line-height: 1.1
+		font-weight: 500
+		letter-spacing: -.01em
+		color: $black
+
++media-breakpoint-down(lg)
+	.screen
+		padding: 80px 0 90px
+		&-title
+			margin: 0 auto 25px			
+			font-size: 40px
+
++media-breakpoint-down(md)
+	.screen
+		padding: 50px 0 60px
+		&-title
+			margin: 0 auto 20px			
+			font-size: 30px
+
++media-breakpoint-down(sm)
+	.screen
+		padding: 40px 0 50px
+		&-title
+			margin: 0 auto 15px			
+			font-size: 26px

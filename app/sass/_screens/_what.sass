@@ -1,0 +1,133 @@
+.screen-what
+	margin-bottom: -50px
+	padding-top: 0
+	padding-bottom: 0
+	text-align: center
+	&__p
+		margin: 0 auto 25px
+		font-size: 18px
+		color: $black-light
+		&:last-of-type
+			margin-bottom: 50px
+
+	&-video
+		&-wrapper
+			position: relative
+			padding: 30px 45px
+			box-sizing: border-box
+			background: url('../img/bg-video-top.png') center no-repeat
+			background-size: 100% 100%
+			&__play
+				position: absolute
+				top: 30px
+				left: 45px
+				right: 45px
+				bottom: 30px
+				z-index: 2
+				background-color: transparentize($blue-sky, 0.2)
+				cursor: pointer
+
+.video
+	&__video
+		display: block
+		width: calc(100% - 1px)
+		height: auto
+	&-play
+		opacity: 1
+		transition: opacity .25s
+		&_hide
+			z-index: -1
+			opacity: 0
+		&__button
+			margin-bottom: 30px
+			width: 105px
+			img
+				display: inline-block
+				width: 100%
+				height: auto
+		&__text
+			font-family: $avenir
+			font-size: 45px
+			font-weight: 500
+			color: $white
+
++media-breakpoint-down(lg)
+	.screen-what
+		margin-bottom: -100px
+		&__p
+			margin-bottom: 20px
+			&:last-of-type
+				margin-bottom: 35px
+		&-video-wrapper
+			padding: 30px 40px
+			&__play
+				left: 38px
+				right: 38px
+				bottom: 25px
+
+		.video
+			&__video
+				width: 100%
+				margin-bottom: -3px
+
++media-breakpoint-down(md)
+	.screen-what
+		margin-bottom: -80px
+		&-video-wrapper
+			padding: 23px 30px
+			&__play
+				top: 23px
+				bottom: 18px
+				left: 28px
+				right: 28px
+
+	.video-play
+		&__button
+			margin-bottom: 15px
+			width: 70px
+		&__text
+			font-size: 30px
+
++media-breakpoint-down(sm)
+	.screen-what
+		margin-bottom: -40px
+		&__p
+			margin-bottom: 15px
+			font-size: 16px
+		&-video-wrapper
+			padding: 19px 22px
+			&__play
+				top: 19px
+				bottom: 14px
+				left: 21px
+				right: 21px
+
+	.video-play
+		&__button
+			margin-bottom: 10px
+			width: 50px
+		&__text
+			font-size: 26px
+
++media-breakpoint-down(xs)
+	.screen-what
+		margin-bottom: 0
+		&__p
+			margin-bottom: 10px
+			font-size: 16px
+			&:last-of-type
+				margin-bottom: 20px
+		&-video-wrapper
+			padding: 11px 11px
+			&__play
+				top: 10px
+				bottom: 8px
+				left: 11px
+				right: 9px
+
+	.video-play
+		&__button
+			margin-bottom: 10px
+			width: 35px
+		&__text
+			font-size: 20px

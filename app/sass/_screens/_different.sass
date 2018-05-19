@@ -1,0 +1,68 @@
+.screen-different
+	.screen-title
+		margin-bottom: 60px
+
+.different
+	&:not(:last-of-type)
+		margin-bottom: 80px
+	&-content
+		text-align: center
+		&__title
+			margin: 0 auto 30px
+			font-size: 35px
+			color: $blue
+		&__p
+			margin: 0
+			font-size: 20px
+			color: $black-light
+
++media-breakpoint-down(lg)
+	.screen-different 
+		.screen-title
+			margin-bottom: 40px
+
+	.different
+		margin-bottom: 60px
+		&:last-of-type
+			margin-bottom: 0
+		&-content__title
+			margin-bottom: 15px
+			font-size: 30px
+
++media-breakpoint-down(md)
+	.screen-different 
+		.screen-title
+			margin-bottom: 30px
+
+	.different
+		margin-bottom: 40px
+		&:last-of-type
+			margin-bottom: 0
+		&-content
+			&__title
+				margin-bottom: 10px
+				font-size: 22px
+			&__p
+				font-size: 16px
+
++media-breakpoint-down(sm)
+	.different
+		&-img
+			text-align: center
+			&__img
+				display: inline-block
+				margin-bottom: 30px
+		&-content__title
+			margin-bottom: 5px
+			font-size: 20px
+		&__p
+			font-size: 14px
+
++media-breakpoint-down(xs)
+	.different
+		margin-bottom: 40px
+		&-img__img
+			margin-bottom: 20px
+		&-content__title
+			margin-bottom: 5px
+			font-size: 20px
