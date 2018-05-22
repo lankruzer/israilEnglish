@@ -12,10 +12,14 @@
 	border-radius: 2px
 	background-color: $white
 	box-shadow: 0 12px 35px 0 rgba(190, 190, 190, 0)
+	border-bottom: 1px solid f5f5f9
 	transition: box-shadow .25s
+	&:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)):not(:nth-last-of-type(3))
+		border-bottom: 1px solid #f5f5f9
 	&:hover
 		z-index: 2
 		box-shadow: 0 12px 35px 0 rgba(190, 190, 190, 0.33)
+		border-bottom: 1px solid white
 		svg
 			fill: $blue-light
 
@@ -54,12 +58,24 @@
 		&-header
 			margin-bottom: 10px
 
++media-breakpoint-down(md)
+	.feature:not(:nth-last-of-type(1)):not(:nth-last-of-type(2))
+		border-bottom: 1px solid #f5f5f9
+
 +media-breakpoint-down(sm)
 	.screen-features
 		.screen-title
 			margin-bottom: 20px
 
 	.feature
-		padding: 10px 15px
+		padding: 10px 15px 15px
 		&-header
 			margin-bottom: 5px
+
++media-breakpoint-down(xs)
+	.feature
+		text-align: center
+		&:not(:nth-last-of-type(1))
+			border-bottom: 1px solid #f5f5f9
+		&-header
+			text-align: center

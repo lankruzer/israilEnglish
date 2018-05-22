@@ -3,7 +3,7 @@
 	top: 0
 	left: 0
 	right: 0
-	z-index: 1
+	z-index: 10
 	margin: 0 auto
 	padding: 65px 15px
 	box-sizing: border-box
@@ -121,15 +121,24 @@
 			right: 0
 			z-index: 1
 			padding: 50px 15px 30px
-			box-sizing: border-box
+			box-sizing: border-box			
 			height: 100vh
-			background: $blue-sky url('../img/bg-main.png') top center no-repeat
+			display: flex
+			align-items: center	
+			// background: $blue-sky url('../img/bg-main.png') top center no-repeat
+			background-color: $blue-sky
 			background-size: 100% 200%
-			transition: .25s
 			transform: translate(0, -100%)
 			overflow: auto
 			&_show
 				transform: translate(0, 0)
+
+		&-nav
+			margin-top: auto
+
+		&-user-block
+			margin: 0 auto auto
+
 		&-link
 			margin-bottom: 15px
 
@@ -145,8 +154,8 @@
 			border: 0
 			outline: none
 			.lines
-				margin-left: 10px
-				width: 25px
+				// margin-left: 10px
+				width: 32px
 
 			&_active
 				.lines
