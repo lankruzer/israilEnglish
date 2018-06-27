@@ -9,7 +9,31 @@
 	box-sizing: border-box
 	max-width: 85%
 	width: 100%
-
+	&_inner
+		position: static
+		background-color: $white
+		box-shadow: 0px 9px 35px 0px rgba(70, 84, 110, 0.11)
+		.header-logo
+			color: $black
+		.header-link
+			position: relative
+			color: $black
+			overflow: hidden
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 50%
+				width: 0
+				height: 4px
+				background-color: $green
+				transform: translateX(-50%)
+				transition: .25s
+			&:hover::after
+				width: calc(100% - 30px)
+		.btn_transparent
+			color: $black
+			border-color: $black
 	&-logo
 		font-family: $avenir
 		font-size: 34px
@@ -109,6 +133,7 @@
 
 +media-breakpoint-down(md)
 	.header
+		padding: 15px 25px
 		&-logo
 			position: relative
 			z-index: 2

@@ -1,0 +1,35 @@
+.period-tabs
+	&-nav
+		margin: 0 auto 35px
+		padding: 0
+		&-li
+			display: inline-block
+			vertical-align: middle
+			list-style: none
+			&.is-active
+				.period-tabs-nav-li__btn
+					color: #fff
+					background-color: #7fd16b
+			&__btn
+				min-width: 150px
+				text-align: center
+				font-size: 13px
+				line-height: 38px
+				font-weight: 400
+				color: #374568
+				border: 0
+				border-radius: 3px
+				background-color: #fff
+				transition: .25s
+				cursor: pointer
+				&:hover
+					color: #374568
+					background-color: lighten(#7fd16b, 20)
+	&-content
+		margin: 0
+		padding: 0
+		list-style: none
+		&-li
+			display: none
+			&.is-show
+				display: block

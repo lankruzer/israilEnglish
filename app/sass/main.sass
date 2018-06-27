@@ -13,12 +13,16 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
+	display: flex
+	flex-direction: column
+	min-height: 100vh
 	line-height: 1.28
 	font-family: $default-font
 	overflow-x: hidden
 	color: $black
-	background: #fff url('../img/bg-main.png') top no-repeat
-	background-size: 100% auto
+	&.index
+		background: #fff url('../img/bg-main.png') top no-repeat
+		background-size: 100% auto
 	&.hide-scroll
 		height: 100vh
 		overflow: hidden
@@ -53,6 +57,7 @@ b, strong
 @import "_elems/buttons"
 @import "_elems/lines"
 @import "_elems/screen"
+@import "_elems/period-tabs"
 
 @import "_screens/header"
 @import "_screens/main"
@@ -62,5 +67,9 @@ b, strong
 @import "_screens/different"
 @import "_screens/ready"
 @import "_screens/footer"
+
+// page prices
+@import "_screens/_screen-prices.sass"
+@import "_screens/_screen-faq.sass"
 
 @import "media" // Always at the end
