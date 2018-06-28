@@ -59,3 +59,69 @@ if (document.querySelector('.faq-list')) {
 		}
 	})
 }
+
+// form-support
+if (document.querySelector('.support-form')) {
+	$('.support-form-label').click(function() {
+		if (!$(this).hasClass('is-checked')) {
+			$('.support-form-label').removeClass('is-checked');
+			$(this).addClass('is-checked');
+
+			$('#step-2').slideDown(250);
+			scrollTo('#step-2');
+		}
+	})
+
+	$('#step-2 .btn').click(function() {
+		if ($('#step-2 input').val().length > $('#step-2 input').attr('minlength')) {
+			$('#step-3').slideDown(250);
+			scrollTo('#step-3');
+		}
+	})
+
+	// popup thank
+	$( '.support-form' ).submit(function(event) {
+		event.preventDefault();
+		$( '.overlay' ).addClass( 'overlay_active' );
+		$( 'html, body' ).toggleClass( 'hide-scroll' )
+		$( '.popup-form__info' ).addClass( 'popup-form_active' );
+	});
+}
+
+// smooth scrolling
+function scrollTo(elem) {
+	$('html, body').animate({
+		scrollTop: $(elem).offset().top
+	}, 1000);
+	$(elem).find('input').focus();
+}
+
+// close popup form on click close
+$( '.popup-form__close' ).click(function(event) {
+	event.preventDefault();
+	$( 'html, body' ).toggleClass( 'hide-scroll' )
+	$( '.overlay' ).removeClass( 'overlay_active' );
+	$( '.popup-form' ).removeClass( 'popup-form_active' );
+});
+// /close popup form on click close
+
+// close popup form on click outside
+$( '.overlay__content' ).click(function(event) {
+	if ( $( '.overlay__content' ).has(event.target).length === 0 ){
+		$('.overlay').removeClass('overlay_active');
+		$( 'html, body' ).toggleClass( 'hide-scroll' )
+		$('.popup-form').removeClass('popup-form_active');
+	}
+});
+// /close popup form on click outside
+
+// close popup on press Esc
+$(document).keyup(function(event) {
+	if ( event.keyCode == 27 ) {
+		$( '.overlay' ).removeClass( 'overlay_active' );
+		$( '.popup-form' ).removeClass( 'popup-form_active' );
+		$( 'html, body' ).toggleClass( 'hide-scroll' );		
+	}
+});
+// /close popup on press Esc
+

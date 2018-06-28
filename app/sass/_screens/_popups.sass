@@ -1,0 +1,102 @@
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	z-index: -1
+	width: 100%
+	height: 100vh
+	overflow: auto
+	background-color: rgba(0, 0, 0, 0.6)
+	opacity: 0
+	transition: .25s
+	&_active
+		opacity: 1
+		z-index: 10
+	&__content
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 50px 0
+		width: 100%
+		min-height: 100vh
+		box-sizing: border-box
+
+.popup-form
+	position: relative
+	display: none
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding: 22px 40px 40px
+	width: 80%
+	min-width: 290px
+	max-width: calc(100% - 30px)
+	height: 80vh
+	min-height: 350px
+	max-height: 790px
+	text-align: center
+	box-sizing: border-box
+	background-color: $light
+	opacity: 0
+	transition: .25s
+	&__close
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 40px
+		height: 40px
+		background-color: transparent
+		border: 0
+		font-size: 0
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 35px
+			height: 10px
+			border-radius: 10px
+			background-color: #fff
+		&::before
+			transform: translate(-50%, -50%) rotate(45deg)
+		&::after
+			transform: translate(-50%, -50%) rotate(135deg)
+	&_active
+		display: flex
+		opacity: 1
+	&__info
+		background-image: linear-gradient( -27deg, rgb(94,175,251) 0%, rgb(115,202,230) 100%, rgb(57,111,178) 100%, rgb(245,245,249) 100%)
+
+	&__text-big
+		margin-bottom: 10px
+		font-family: $avenir
+		font-size: 50px
+		font-weight: 700
+		color: #fff
+	&__text-small
+		font-size: 25px
+		font-weight: 300
+		color: #fff
+
++media-breakpoint-down(lg)
+	.popup-form__text-big
+		font-size: 40px
+
++media-breakpoint-down(md)
+	.popup-form__text-big
+		font-size: 30px
+	.popup-form__text-small
+		font-size: 20px
+
++media-breakpoint-down(sm)
+	.popup-form__text-big
+		font-size: 25px
+	.popup-form__text-small
+		font-size: 18px
+
++media-breakpoint-down(xs)
+	.popup-form__text-big
+		font-size: 20px
+	.popup-form__text-small
+		font-size: 16px

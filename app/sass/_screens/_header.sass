@@ -31,9 +31,22 @@
 				transition: .25s
 			&:hover::after
 				width: calc(100% - 30px)
+		.header-nav-ul-li.is-active
+			.header-link::after
+				width: calc(100% - 30px)
 		.btn_transparent
 			color: $black
 			border-color: $black
+		.lines
+			background-color: #383838
+			box-shadow: 0 -6px 0 0 #383838, 0 6px 0 0 #383838
+		.btn-mobile-menu_active
+			.lines
+				background-color: #383838
+				box-shadow: 0 -6px 0 0 #383838, 0 6px 0 0 #383838
+				&::before,
+				&::after
+					background-color: #383838!important
 	&-logo
 		font-family: $avenir
 		font-size: 34px
