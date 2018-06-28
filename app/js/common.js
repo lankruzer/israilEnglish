@@ -16,11 +16,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	// /play video
 
 	// mobile menu
-	document.querySelector('.btn-mobile-menu').addEventListener('click', function(event) {
-		this.classList.toggle('btn-mobile-menu_active');
-		document.querySelector('.header-links-js').classList.toggle('header-links-js_show');
-		document.body.classList.toggle('hide-scroll');
-	});
+	if (document.querySelector('.btn-mobile-menu')) {
+		document.querySelector('.btn-mobile-menu').addEventListener('click', function(event) {
+			this.classList.toggle('btn-mobile-menu_active');
+			document.querySelector('.header-links-js').classList.toggle('header-links-js_show');
+			document.body.classList.toggle('hide-scroll');
+		});
+	}
 	// mobile menu
 	
 })
