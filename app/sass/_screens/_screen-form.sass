@@ -1,0 +1,196 @@
+.screen-form
+	position: relative
+	width: 100%
+	height: auto
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	background-image: linear-gradient( 27deg, rgb(94,175,251) 0%, rgb(115,202,230) 100%, rgb(57,111,178) 100%, rgb(245,245,249) 100%)
+	overflow: hidden
+	&__logo
+		margin: 55px auto 20px 65px
+		font-family: $avenir
+		font-size: 32px
+		font-weight: 600
+		color: #fff
+	.container
+		padding-top: 50px
+		padding-bottom: 50px
+		margin: auto
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	&__text-before
+		margin-bottom: 10px
+		text-align: center
+		font-size: 20px
+		font-wight: 600
+		color: #ffffff
+	&__text-after
+		margin-top: 10px
+		text-align: center
+		font-size: 12px
+		line-height: 1.4
+		color: #fff
+	&__white-link
+		font-size: 12px
+		line-height: 1.4
+		color: #fff
+		text-decoration: underline
+
+.single-form
+	box-sizing: border-box
+	padding: 35px 35px 40px
+	max-width: 400px
+	width: calc(100% - 20px)
+	border-radius: 3px
+	background-color: rgb(251, 251, 251)	
+	box-shadow: 0px 29px 51px 0px rgba(171, 178, 229, 0.38)
+	&__title
+		margin-bottom: 45px
+		text-align: center
+		font-size: 50px
+		line-height: 1.2
+		font-family: $avenir
+		font-weight: 400
+		color: #383838
+		.small
+			display: block
+			font-size: 16px
+			line-height: 1.2
+			color: #384669
+	&-label
+		display: flex
+		align-items: center
+		margin-bottom: 35px
+		&:hover,
+		&:focus
+			.single-form-label
+				&__icon svg
+					fill: #6bc1f4
+				&__input
+					color: #6bc1f4
+					border-color: #6bc1f4
+		&__icon
+			display: inline-block
+			vertical-align: middle
+			margin-right: 20px
+			max-width: 25px
+			max-height: 25px
+			width: auto
+			height: auto
+			svg
+				width: 25px
+				height: 25px
+				fill: #b5bed5
+				transition: .25s
+		&__input
+			width: 85%
+			height: 45px
+			font-size: 15px
+			border: 0
+			border-bottom: 1px solid #b5bed5
+			background-color: transparent
+			transition: .25s
+			&::placeholder
+				color: #b5bdd5
+			&:hover,
+			&:focus
+				color: #6bc1f4
+				border-color: #6bc1f4
+	&-check-label
+		margin-bottom: 0
+		font-size: 15px
+		color: #5c6268
+		cursor: pointer
+		&__pseudo-input
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			margin-right: 15px
+			width: 25px
+			height: 25px
+			background-color: #6bc1f4
+			border-radius: 4px
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: 1
+				box-sizing: border-box
+				width: 10px
+				height: 15px
+				border-right: 4px solid #fff
+				border-bottom: 4px solid #fff
+				transform: translate(-50%, -50%) rotate(45deg)
+				opacity: 0
+				transition: .25s
+		&__input
+			display: none
+			&:checked + .single-form-check-label__pseudo-input::before
+				opacity: 1
+
+	&__row
+		margin-bottom: 45px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__link
+		font-size: 15px
+		font-wight: 600
+		color: #2d3c62
+		text-decoration: underline
+	.btn
+		margin-bottom: 25px
+		padding: 0
+		width: 100%
+		font-size: 20px
+		min-height: 50px
+		border: 0
+	&-bottom
+		text-align: center
+		font-size: 15px
+		line-height: 20px
+		color: #2d3c62
+		&__link
+			color: #6bc0f5
+			text-decoration: underline
+
+@media (max-width: 576px)
+	.screen-form__text-before
+		font-size: 18px
+	.single-form
+		padding: 25px 15px 30px
+		&__title
+			margin-bottom: 25px
+			font-size: 30px
+			.small
+				font-size: 14px
+		&-label
+			margin-bottom: 20px
+			&__icon
+				max-width: 20px
+				max-height: 20px
+				margin-right: 10px
+		&-check-label
+			&__pseudo-input
+				width: 20px
+				height: 20px
+				margin-right: 5px
+				&::before
+					width: 7px
+					height: 12px
+		&__link
+			margin-top: 15px
+			margin-left: 30px
+			width: 100%
+		&__row
+			flex-wrap: wrap
+			margin-bottom: 25px
+		.btn
+			margin-bottom: 15px
+
