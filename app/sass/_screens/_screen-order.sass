@@ -1,0 +1,272 @@
+.screen-order
+	border-bottom: 1px solid #b5bdd5
+	background-color: #f2f2f2
+	form .container
+		display: flex
+		flex-wrap: wrap
+	&-fields
+		margin-right: 8%
+		width: 58%
+	&-info
+		padding-top: 45px
+		width: calc(100% - 58% - 8%)
+		.btn
+			margin-bottom: 25px
+			min-width: auto
+			width: 100%
+			font-size: 18px
+			border: 0
+			img
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px
+	&__text
+		margin-bottom: 30px
+		font-size: 18px
+		color: #383838
+	&__title
+		margin: 0 0 15px
+		font-family: $avenir
+		font-size: 25px
+		font-weight: 600
+		color: #2d3963
+	&__block
+		margin-bottom: 35px
+		box-sizing: border-box
+		padding: 30px 45px
+		background-color: #fff
+		box-shadow: 0px 12px 35px 0px rgba(144, 158, 189, 0.15)
+		&_payment
+			padding: 52px 45px
+	&-summary-table
+		margin-bottom: 25px
+		width: 100%
+		background-color: #fff
+		box-shadow: 0px 12px 35px 0px rgba(144, 158, 189, 0.15)
+		th
+			padding: 0 45px
+			box-sizing: border-box
+			font-family: $avenir
+			font-size: 18px
+			line-height: 26px
+		td
+			padding: 0 45px
+			text-align: right
+			font-size: 14px
+			line-height: 30px
+			color: #5c6268
+		tbody
+			tr:first-of-type
+				th, td
+					padding-top: 30px
+			tr:last-of-type
+				th, td
+					padding-bottom: 20px
+		tfoot
+			tr
+				background-color: #d5d5db
+			td
+				padding: 10px 45px
+				font-family: $avenir
+				font-size: 18px
+				color: #383838
+				font-weight: 700
+				&:first-of-type
+					text-align: left
+	&-table
+		width: 100%
+		th
+			width: 80%
+			font-family: $avenir
+			font-size: 18px
+			&:nth-of-type(2)
+				width: auto
+				text-align: center
+		td
+			width: 80%
+			font-family: $avenir
+			&:nth-of-type(2)
+				width: auto
+				text-align: center
+			font-size: 14px
+			color: #383838
+	&-images
+		&__img
+			display: inline-block
+			vertical-align: middle
+			margin: 0 5px 5px 0
+	&-text
+		font-size: 14px
+		&__link
+			font-size: 14px
+			text-decoration: underline
+			color: #3998cb
+			transition: .25s
+			&:hover
+				color: $green
+
+.payment
+	display: flex
+	&__fields
+		flex-basis: 100%
+	&__or
+		position: relative		
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding: 0 10px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			z-index: 1
+			width: 1px
+			height: 100%
+			background-color: #b5bdd5
+			transform: transateX(-50%)
+		span
+			position: relative
+			z-index: 2
+			display: inline-block
+			box-sizing: border-box
+			padding: 10px
+			font-family: $avenir
+			font-size: 18px
+			line-height: 1
+			background-color: #fff
+	&-pay-pal
+		min-width: 100px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-align: center
+		font-size: 14px
+		color: #3d3d3d
+		&__link
+			margin-top: 10px
+			display: inline-block
+		&__img
+			display: inline-block
+			max-width: 100%
+			width: 100px
+			height: auto
+	&-input
+		box-sizing: border-box
+		padding: 0 10px
+		height: 36px
+		fotn-size: 15px
+		color: #3d3d3d
+		border: 1px solid #b5bdd5
+		transition: .25s
+		&:hover
+			border-color: $blue-light
+		&:focus
+			border-color: $green
+		&_100
+			width: 100%
+	&-label
+  		margin-bottom: 25px
+  		display: block
+  		&__text
+  			display: block
+  			margin-bottom: 10px
+  			width: 100%
+  			font-family: $avenir
+  			font-size: 18px
+  			color: #383838
+  			&_row
+  				display: flex
+  				flex-wrap: wrap
+  				.payment-label-text
+  					margin-right: auto
+  				.payment-label-images
+  					margin: 0 auto
+  					&__img
+  						margin: 0 5px
+  						display: inline-block
+  						vertical-align: middle
+  						max-wdith: 100%
+  						height: auto
+  		&__input
+  			display: block
+  			width: 100%
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+.block-lock
+	display: flex
+	&-lock
+		box-sizing: border-box
+		margin-right: 25px
+		display: flex
+		align-items: center
+		min-width: 65px
+		border-right: 1px solid #b5bed5
+		&__img
+			display: inline-block
+			vertical-align: middle
+			max-width: 30px
+	&-text
+		font-size: 14px
+		line-height: 16px
+
++media-breakpoint-down(lg)
+	.screen-order
+		&-fields
+			margin-right: 4%
+			width: 60%
+		&-info
+			padding-top: 20px
+			width: calc(100% - 60% - 4%)
+		&__title
+			margin-bottom: 10px
+			font-size: 22px
+		&__text
+			font-size: 16px
+		&-table
+			td,
+			th
+				width: 40%
+			th:first-of-type,
+			td:first-of-type
+				width: 60%
+		&__block
+			padding: 15px 20px
+			&_payment
+				padding: 30px 20px
+		&-summary-table 
+			th,
+			td,
+			tfoot td
+				padding-left: 20px
+				padding-right: 20px
+
++media-breakpoint-down(md)
+	.screen-order 
+		form .container
+			flex-direction: column
+		&-fields,
+		&-info
+			margin: 0
+			width: 100%
+
++media-breakpoint-down(sm)
+	.screen-order-table th
+		font-size: 16px
+		
+	.payment
+		flex-direction: column
+		&__or
+			&::before
+				left: 0
+				top: 50%
+				width: 100%
+				height: 1px
+				transfrom: translateY(-50%)
+		&-label
+			width: 100%

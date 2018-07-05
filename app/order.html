@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Order</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#2d3963">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+<header class="header header_inner">
+	
+	<div class="d-flex justify-content-between align-items-center">
+		
+		<a href="index.html" class="header-logo">			
+			<span class="header-logo__img">
+				<img src="#" alt="">
+			</span>
+			<span class="header-logo__text">Website Logo</span>		
+		</a>
+
+		<div class="header-links-js d-flex flex-column flex-lg-row justify-content-lg-between align-items-center align-items-lg-baseline">		
+			<nav class="header-nav">
+				<ul class="header-nav-ul d-flex flex-column flex-lg-row align-items-center align-items-lg-baseline">			
+					<li class="header-nav-ul-li">
+						<a href="index.html" class="header-nav-ul-li__link header-link">Home</a>
+					</li>
+					<li class="header-nav-ul-li">
+						<a href="#" class="header-nav-ul-li__link header-link">Features</a>
+					</li>
+					<li class="header-nav-ul-li is-active">
+						<a href="pricing.html" class="header-nav-ul-li__link header-link">Pricing</a>
+					</li>
+					<li class="header-nav-ul-li">
+						<a href="#" class="header-nav-ul-li__link header-link">Developers</a>
+					</li>
+					<li class="header-nav-ul-li">
+						<a href="#" class="header-nav-ul-li__link header-link">FAQ</a>
+					</li>
+					<li class="header-nav-ul-li">
+						<a href="support.html" class="header-nav-ul-li__link header-link">Support</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="header-user-block d-flex flex-column flex-lg-row align-items-center align-items-lg-baseline">
+				<a href="#" class="header-link">Log in</a>
+				<!-- <a href="#" class="btn_transparent">Get Started</a> -->
+			</div>
+
+		</div>
+
+		<button class="btn-mobile-menu"><span class="lines"></span></button>
+	</div>
+</header>
+
+	<main class="main">
+
+		<div class="screen screen-order">
+		
+			<form name="payment" method="post" action="#" class="">
+				<div class="container">
+					
+					<div class="screen-order-fields">
+						<div class="screen-order__title">Select a plan</div>
+						<div class="screen-order__block">
+							<table class="screen-order-table">
+								<thead>
+									<tr>
+										<th>Banner Starter</th>
+										<th>Billed yearly</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Change plan</td>
+										<td>$ 7.00/month</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="screen-order__title">Payment method</div>
+						<div class="screen-order__block screen-order__block_payment">
+							<div class="payment">
+								<div class="payment__fields">
+									
+									<label class="payment-label">
+										<span class="payment-label__text payment-label__text_row">
+											<span class="payment-label-text">Card number</span>
+											<span class="payment-label-images">
+												<img src="img/visa.png" alt="" class="payment-label-images__img">
+												<img src="img/master.png" alt="" class="payment-label-images__img">
+												<img src="img/amex.png" alt="" class="payment-label-images__img">
+											</span>
+										</span>
+
+										<input class="payment-label__input payment-input" type="text" name="card-number" required>
+									</label>
+
+									<div class="payment__row">
+
+										<div class="payment-label">
+											<span class="payment-label__text">
+												Expiration day
+											</span>
+											<select class="payment-input" name="expiration-day">
+												<option value="01">01</option>
+												<option value="02">02</option>
+												<option value="03">03</option>
+												<option value="04">04</option>
+												<option value="05">05</option>
+												<option value="06">06</option>
+												<option value="07">07</option>
+												<option value="08">08</option>
+												<option value="09">09</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+												<option value="22">22</option>
+												<option value="23">23</option>
+												<option value="24">24</option>
+												<option value="25">25</option>
+												<option value="26">26</option>
+												<option value="27">27</option>
+												<option value="28">28</option>
+												<option value="29">29</option>
+												<option value="30">30</option>
+											</select>
+											/
+											<select class="payment-input" name="expiration-year">
+												<option value="2018">2018</option>
+												<option value="2017">2017</option>
+												<option value="2016">2016</option>
+												<option value="2015">2015</option>
+												<option value="2014">2014</option>
+											</select>
+										</div>
+
+										<label class="payment-label">
+											<span class="payment-label__text">
+												Security code
+											</span>
+											<input class="payment-label__input payment-input" type="number" name="code" required>
+										</label>
+									</div>
+
+									<label class="payment-label">
+										<span class="payment-label__text">
+											Name on card
+										</span>
+
+										<input class="payment-label__input payment-input" type="text" name="card-name" required>
+									</label>
+
+									<div class="payment-label">
+										<span class="payment-label__text">
+											Country 
+										</span>
+
+										<select class="payment-input payment-input_100" name="country" required>
+											<option value="country1">country 1</option>
+											<option value="country2">country 2</option>
+											<option value="country3">country 3</option>
+											<option value="country4">country 4</option>
+										</select>
+									</div>
+
+
+								</div>
+								<div class="payment__or">
+									<span>or</span>
+								</div>
+								<div class="payment-pay-pal">
+									Pay with
+									<a href="#" class="payment-pay-pal__link">
+										<img src="img/pp.png" alt="" class="payment-pay-pal__img">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="screen-order-info">
+						<div class="screen-order__title">Lorem ipsum using you</div>
+						<div class="screen-order__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</div>
+
+						<div class="screen-order__title">Order summary</div>
+						<table class="screen-order-summary-table">
+							<tbody>
+								<tr>
+									<th>Plan:</th>
+									<td>Banner Starter</td>
+								</tr>
+								<tr>
+									<th>Price:</th>
+									<td>Price:</td>
+								</tr>
+								<tr>
+									<th>Lorem nice:</th>
+									<td>Monthly</td>
+								</tr>
+								<tr>
+									<th>Expiry:</th>
+									<td>29 may 2018</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td>Final price:</td>
+									<td>$100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+
+						<button type="submit" class="btn btn_green"><img src="img/btn-check.png" alt=""> Complete Purchase</button>
+
+						<div class="screen-order__block">
+							<div class="block-lock">
+								<div class="block-lock-lock">
+									<img class="block-lock-lock__img" src="img/lock.png" alt="">
+								</div>
+								<div class="block-lock-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</form>
+
+			<div class="container">
+				<div class="screen-order-images">
+					<img src="img/visa.png" alt="" class="screen-order-images__img">
+					<img src="img/master.png" alt="" class="screen-order-images__img">
+					<img src="img/amex.png" alt="" class="screen-order-images__img">
+				</div>
+				<div class="screen-order-text">
+					By completing the purchase, I agree with Boomtrack
+					<a href="#" target="_blank" class="screen-order-text__link">Terms</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+<footer class="footer">
+	<div class="container">
+		<nav class="footer-nav">
+			<ul class="footer-nav-ul d-flex flex-wrap justify-content-center align-items-center">
+				<li class="footer-nav-ul-li">
+					<a href="index.html" class="footer-nav-ul-li__link">Home</a>
+				</li>
+
+				<li class="footer-nav-ul-li">
+					<a href="#" class="footer-nav-ul-li__link">Features</a>
+				</li>
+
+				<li class="footer-nav-ul-li">
+					<a href="pricing.html" class="footer-nav-ul-li__link">Pricing</a>
+				</li>
+
+				<li class="footer-nav-ul-li">
+					<a href="#" class="footer-nav-ul-li__link">Developers</a>
+				</li>
+
+				<li class="footer-nav-ul-li">
+					<a href="#" class="footer-nav-ul-li__link">FAQ</a>
+				</li>
+
+				<li class="footer-nav-ul-li">
+					<a href="support.html" class="footer-nav-ul-li__link">Support</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="footer__copyright">Copyright © Site</div>
+	</div>
+</footer>
+
+<div class="overlay">
+	<div class="overlay__content">
+
+		<div class="popup-form popup-form__info">
+			<button class="popup-form__close" type="button">Close</button>
+
+			<div class="popup-form__text-big">We'll get back to you soon</div>
+			<div class="popup-form__text-small">Please follow the spam box too</div>
+		</div>
+
+	</div>
+</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

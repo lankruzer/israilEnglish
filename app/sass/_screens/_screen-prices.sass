@@ -20,11 +20,24 @@
 			font-weight: 700
 
 .prices
+	position: relative
 	display: flex
 	align-items: flex-end
 	flex-wrap: wrap
-	overflow: hidden
+	// overflow: hidden
+	&::before
+		content: ''
+		position: absolute
+		bottom: 30px
+		left: 50%
+		width: calc(100% - 100px)
+		height: calc(100% - 115px)
+		background-color: transparent
+		box-shadow: 0 0 100px 00px #000
+		transform: translateX(-50%)	
 	&__price
+		position: relative
+		z-index: 2
 		width: 25%
 		box-sizing: border-box
 		&:not(:last-of-type)
@@ -33,36 +46,36 @@
 .price
 	position: relative
 	margin-bottom: 10px
-	&::before
-		content: ''
-		position: absolute
-		bottom: 100%
-		left: 0
-		width: calc(100% + 1px)
-		height: 15px
-		background-color: #d6d8df
-	&:first-of-type::before
-		left: 20px
-	&:last-of-type::before
-		left: auto
-		right: 20px
-	&::after
-		content: ''
-		position: absolute
-		top: 100%
-		left: 0
-		width: calc(100% + 1px)
-		height: 10px
-		background-color: #d6d8df
-	&:first-of-type::after
-		left: 20px
-	&:last-of-type::after
-		left: auto
-		right: 20px
+	// &::before
+	// 	content: ''
+	// 	position: absolute
+	// 	bottom: 100%
+	// 	left: 0
+	// 	width: calc(100% + 1px)
+	// 	height: 15px
+	// 	background-color: #d6d8df
+	// &:first-of-type::before
+	// 	left: 20px
+	// &:last-of-type::before
+	// 	left: auto
+	// 	right: 20px
+	// &::after
+	// 	content: ''
+	// 	position: absolute
+	// 	top: 100%
+	// 	left: 0
+	// 	width: calc(100% + 1px)
+	// 	height: 10px
+	// 	background-color: #d6d8df
+	// &:first-of-type::after
+	// 	left: 20px
+	// &:last-of-type::after
+	// 	left: auto
+	// 	right: 20px
 	&_most-popular
 		box-shadow: 0px 5px 29px 0px rgba(40, 44, 49, 0.13)
-		&::before
-			display: none
+		// &::before
+		// 	display: none
 		.price__most-popular
 			display: inline-block
 	&__content
@@ -216,58 +229,102 @@
 	.prices
 		padding-top: 15px
 		&__price
-			margin-bottom: 35px
-			width: 50%
-			&:last-of-type
-				margin-bottom: 0
+			// margin-bottom: 35px
+			margin-bottom: 0
+			// width: 50%
+			width: 25%
+			// &:last-of-type
+			// 	margin-bottom: 0
 
+@media (min-width: 575.98px) and (max-width: 767.98px)
 	.price
-		&:nth-of-type(odd)
-			&::before
-				right: auto
-				left: 15px
-				height: 12px
-			&::after
-				right: auto
-				left: 15px
-
-		&:nth-of-type(even)
-			border-right: 0
-			&::before
-				left: auto
-				right: 15px
-				height: 12px
-			&::after
-				left: auto
-				right: 15px
+		// &::before
+		// 	height: 10px
+		// &::after
+		// 	height: 5px
+		&__title
+			font-size: 16px
+			line-height: 35px
 		&__content
-			padding: 15px 5px 25px
+			padding: 10px 2px 15px 
+		&__most-popular
+			margin-bottom: 10px
+			padding-bottom: 3px
+			font-size: 12px
+			&::after
+				height: 2px
+		&__text-top
+			min-height: 64px
+			font-size: 12px
+		&-cost
+			min-height: 45px
+			font-size: 16px
+			&__period
+				font-size: 10px
+				&-small
+					font-size: 10px
+		&__campaign
+			font-size: 11px
+		&-features__li
+			font-size: 10px
+
+	// .price
+	// 	&:nth-of-type(odd)
+	// 		&::before
+	// 			right: auto
+	// 			left: 15px
+	// 			height: 12px
+	// 		&::after
+	// 			right: auto
+	// 			left: 15px
+
+	// 	&:nth-of-type(even)
+	// 		border-right: 0
+	// 		&::before
+	// 			left: auto
+	// 			right: 15px
+	// 			height: 12px
+	// 		&::after
+	// 			left: auto
+	// 			right: 15px
+	// 	&__content
+	// 		padding: 15px 5px 25px
 
 +media-breakpoint-down(xs)
 	.prices
 		padding-top: 10px
+		&::before
+			display: none
 		&__price
 			margin-bottom: 40px
 			width: 100%
 
 	.price
-		&:nth-of-type(odd)
-			&::before
-				left: 15px
-				width: calc(100% - 30px)
-				height: 10px
-			&::after
-				left: 15px
-				width: calc(100% - 30px)
-				height: 5px
+		box-shadow: 0 0 10px 0px rgba(0, 0, 0, .4)
+		border: 0!important
+		// &:nth-of-type(odd)
+		// 	&::before
+		// 		left: 15px
+		// 		width: calc(100% - 30px)
+		// 		height: 10px
+		// 	&::after
+		// 		left: 15px
+		// 		width: calc(100% - 30px)
+		// 		height: 5px
 
 		&:nth-of-type(even)
 			border-right: 0
-			&::before
-				left: 15px
-				width: calc(100% - 30px)
-				height: 10px
-			&::after
-				left: 15px
-				width: calc(100% - 30px)
-				height: 5px
+			// &::before
+			// 	left: 15px
+			// 	width: calc(100% - 30px)
+			// 	height: 10px
+			// &::after
+			// 	left: 15px
+			// 	width: calc(100% - 30px)
+			// 	height: 5px
+		.btn
+			width: auto
+			min-width: 180px
+			min-height: 50px
+			padding: 12.5px
+			font-size: 20px

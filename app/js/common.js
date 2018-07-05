@@ -54,10 +54,14 @@ if (document.querySelector('.period-tabs-nav')) {
 if (document.querySelector('.faq-list')) {
 	$('.faq-list-question').click(function(){
 		if (!$(this).hasClass('is-active')) {
-			$('.faq-list-question').not($(this)).removeClass('is-active');
-			$('.faq-list__answer').not($(this).next()).slideUp(250);
+			$('.faq-list-question').removeClass('is-active');
+			$('.faq-list__answer').slideUp(250);
 			$(this).addClass('is-active');
 			$($(this).next()).slideToggle(250);
+		} else {
+			$('.faq-list__answer').slideUp(250);
+			$(this).removeClass('is-active');
+			$($(this).next()).slideUp(250);
 		}
 	})
 }
